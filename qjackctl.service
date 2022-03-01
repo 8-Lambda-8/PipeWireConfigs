@@ -1,0 +1,15 @@
+[Unit]
+Description=qjackctl
+After=pipewire.service
+Requires=pipewire.service
+PartOf=pipewire.service
+
+[Service]
+PassEnvironment="PIPEWIRE_LINK_PASSIVE=true"
+Type=exec
+Restart=always
+StandardOutput=journal
+ExecStart=pw-jack qjackctl -a /home/jakob/PW_Configs/qJackCtl_Patch.xml
+
+[Install]
+WantedBy=default.target

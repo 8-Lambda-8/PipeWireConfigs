@@ -1,0 +1,15 @@
+[Unit]
+Description=chromeTabLinker
+After=pipewire.service
+Requires=pipewire.service
+PartOf=pipewire.service
+
+[Service]
+PassEnvironment="PIPEWIRE_LINK_PASSIVE=true"
+Type=simple
+Restart=always
+#StandardOutput=journal
+ExecStart=pw-jack python3 /home/jakob/PW_Configs/chrome_tab_linker.py
+
+[Install]
+WantedBy=default.target

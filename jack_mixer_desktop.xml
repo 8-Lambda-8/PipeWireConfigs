@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<jack_mixer geometry="1213x674" paned_position="757" visible="True">
+	<input_channel name="Desktop" type="stereo" direct_output="False" volume="-16.800000" balance="-0.025123" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="31" mute_midi_cc="27"/>
+	<input_channel name="Discord" type="stereo" direct_output="False" volume="-16.800000" balance="-0.004275" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="32" mute_midi_cc="28"/>
+	<input_channel name="Chrome 1" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="33" mute_midi_cc="29"/>
+	<input_channel name="Chrome 2" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="34" mute_midi_cc="30"/>
+	<input_channel name="Chrome 3" type="stereo" direct_output="False" volume="-16.800000" balance="0.008257" wide="True" meter_prefader="False" out_mute="False"/>
+	<input_channel name="Mic" type="stereo" direct_output="False" volume="-inf" balance="0.000000" wide="True" meter_prefader="False" out_mute="False"/>
+	<output_channel name="Lautsprecher" type="stereo" muted_channels="Discord|Mic" color="rgb(169,197,162)" volume="-14.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="10" mute_midi_cc="6"/>
+	<output_channel name="Headset" type="stereo" color="rgb(93,143,75)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="11" mute_midi_cc="7"/>
+	<output_channel name="AUX" type="stereo" muted_channels="Mic" color="rgb(247,55,83)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="12" mute_midi_cc="8"/>
+	<output_channel name="OBS" type="stereo" muted_channels="Mic" color="rgb(172,204,27)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="13" mute_midi_cc="9"/>
+	<gui_factory confirm-quit="False" default_meter_scale="K14" default_project_path="/home/jakob/Bilder" default_slider_scale="linear_70dB" midi_behavior_mode="0" use_custom_widgets="False" vumeter_color="#ccccb3b30000" vumeter_color_scheme="default" auto_reset_peak_meters="False" auto_reset_peak_meters_time_seconds="0.9999999999999992" meter_refresh_period_milliseconds="50"/>
+</jack_mixer>
