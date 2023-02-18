@@ -1,138 +1,165 @@
 <!DOCTYPE patchbay>
-<patchbay version="0.9.6" name="qJackCtl_Patch">
+<patchbay name="qJackCtl_Patch" version="0.9.9">
  <output-sockets>
-  <socket client="jack_mixer" type="jack-midi" exclusive="off" name="jack_mixer MIDI">
+  <socket name="jack_mixer MIDI" client="jack_mixer" exclusive="off" type="jack-midi">
    <plug>midi\ out</plug>
   </socket>
-  <socket client="Midi\-Bridge" type="jack-midi" exclusive="off" name="Midi-Bridge">
-   <plug>DJHP_Board2\:\(capture_0\)\ DJHP_Board2\ MIDI\ 1</plug>
+  <socket name="DJHP_Board1" client="Midi\-Bridge" exclusive="off" type="jack-midi">
+   <plug>Lambda\ DJHP_Board\ at\ usb\-[0-9]+\:2a\:00\-3\-1\-2\-\ full\ speed\:\(capture_0\)\ DJHP_Board\ MIDI\ 1</plug>
    <plug>DJHP_Board\:\(capture_0\)\ DJHP_Board\ MIDI\ 1</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer G933">
+  <socket name="DJHP_Board2" client="Midi\-Bridge" exclusive="off" type="jack-midi">
+   <plug>Lambda\ DJHP_Board2\ at\ usb\-[0-9]+\:2a\:00\-3\-1\-1\-\ full\ speed\:\(capture_0\)\ DJHP_Board2\ MIDI\ 1</plug>
+  </socket>
+  <socket name="jack_mixer G933" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>Headset\ L</plug>
    <plug>Headset\ R</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer Lautsprecher">
+  <socket name="jack_mixer Lautsprecher" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>Lautsprecher\ L</plug>
    <plug>Lautsprecher\ R</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer AUX">
+  <socket name="jack_mixer AUX" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>AUX\ L</plug>
    <plug>AUX\ R</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer OBS">
+  <socket name="jack_mixer OBS" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>OBS\ L</plug>
    <plug>OBS\ R</plug>
   </socket>
-  <socket client="G933\ Headset" type="jack-audio" exclusive="off" name="G933 Mic">
+  <socket name="jack_mixer SFX" client="jack_mixer" exclusive="off" type="jack-audio">
+   <plug>SFX\ Out\ L</plug>
+   <plug>SFX\ Out\ R</plug>
+  </socket>
+  <socket name="Microphone in Monitor" client="Microphone\ in" exclusive="off" type="jack-audio">
+   <plug>capture_FL</plug>
+   <plug>capture_FR</plug>
+  </socket>
+  <socket name="G933 Mic" client="G933\ Headset" exclusive="off" type="jack-audio">
    <plug>capture_MONO</plug>
   </socket>
-  <socket client="AUX" type="jack-audio" exclusive="off" name="AUX In">
+  <socket name="AUX In" client="AUX" exclusive="off" type="jack-audio">
    <plug>capture_FL</plug>
    <plug>capture_FR</plug>
   </socket>
-  <socket client="Microphone\ in\ Monitor" type="jack-audio" exclusive="off" name="Microphone in Monitor">
+  <socket name="Microphone Out Monitor" client="Microphone\ Out" exclusive="off" type="jack-audio">
    <plug>capture_FL</plug>
    <plug>capture_FR</plug>
   </socket>
-  <socket client="Microphone\ Out\ Monitor" type="jack-audio" exclusive="off" name="Microphone Out Monitor">
+  <socket name="Desktop Sink Monitor" client="Desktop\ Sink" exclusive="off" type="jack-audio">
    <plug>capture_FL</plug>
    <plug>capture_FR</plug>
   </socket>
-  <socket client="Desktop\ Sink\ Monitor" type="jack-audio" exclusive="off" name="Desktop Sink Monitor">
-   <plug>capture_FL</plug>
-   <plug>capture_FR</plug>
-  </socket>
-  <socket client="WEBRTC\ VoiceEngine" type="jack-audio" exclusive="off" name="Discord">
+  <socket name="Discord" client="WEBRTC\ VoiceEngine" exclusive="off" type="jack-audio">
    <plug>output_FL</plug>
    <plug>output_FR</plug>
   </socket>
-  <socket client="Chromium" type="jack-audio" exclusive="off" name="Discord sys">
+  <socket name="Discord sys" client="Chromium" exclusive="off" type="jack-audio">
    <plug>output_FL</plug>
    <plug>output_FR</plug>
   </socket>
-  <socket client="ALSA\ plug\-in\ \[audacity\]" type="jack-audio" exclusive="off" name="Audacity">
+  <socket name="Mixxx_sampler" client="ALSA\ plug\-in\ \[mixxx\]" exclusive="off" type="jack-audio">
    <plug>output_FL</plug>
    <plug>output_FR</plug>
+  </socket>
+  <socket name="Audacity" client="ALSA\ plug\-in\ \[audacity\]" exclusive="off" type="jack-audio">
+   <plug>output_FL</plug>
+   <plug>output_FR</plug>
+  </socket>
+  <socket name="alsoft 1" client="alsoft" exclusive="off" type="jack-audio">
+   <plug>channel_1</plug>
+   <plug>channel_2</plug>
   </socket>
  </output-sockets>
  <input-sockets>
-  <socket client="Midi\-Bridge" type="jack-midi" exclusive="off" name="Midi-Bridge">
-   <plug>DJHP_Board2\:\(playback_0\)\ DJHP_Board2\ MIDI\ 1</plug>
+  <socket name="DJHP_Board1" client="Midi\-Bridge" exclusive="off" type="jack-midi">
+   <plug>Lambda\ DJHP_Board\ at\ usb\-[0-9]+\:2a\:00\-3\-1\-2\-\ full\ speed\:\(playback_0\)\ DJHP_Board\ MIDI\ 1</plug>
    <plug>DJHP_Board\:\(playback_0\)\ DJHP_Board\ MIDI\ 1</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-midi" exclusive="off" name="jack_mixer MIDI">
+  <socket name="DJHP_Board2" client="Midi\-Bridge" exclusive="off" type="jack-midi">
+   <plug>Lambda\ DJHP_Board2\ at\ usb\-[0-9]+\:2a\:00\-3\-1\-1\-\ full\ speed\:\(playback_0\)\ DJHP_Board2\ MIDI\ 1</plug>
+  </socket>
+  <socket name="jack_mixer MIDI" client="jack_mixer" exclusive="off" type="jack-midi">
    <plug>midi\ in</plug>
   </socket>
-  <socket client="G933\ Headset" type="jack-audio" exclusive="off" name="G933">
+  <socket name="G933" client="G933\ Headset" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="Lautsprecher" type="jack-audio" exclusive="off" name="Lautsprecher">
+  <socket name="Lautsprecher" client="Lautsprecher" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="AUX" type="jack-audio" exclusive="off" name="AUX">
+  <socket name="AUX" client="AUX" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="OBS" type="jack-audio" exclusive="off" name="OBS Desktop">
+  <socket name="OBS Desktop" client="OBS" exclusive="off" type="jack-audio">
    <plug>input_FL</plug>
    <plug>input_FR</plug>
   </socket>
-  <socket client="Microphone\ in" type="jack-audio" exclusive="off" name="Microphone In">
+  <socket name="Microphone Out " client="Microphone\ Out" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="Microphone\ Out" type="jack-audio" exclusive="off" name="Microphone Out ">
+  <socket name="Microphone In" client="Microphone\ in" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
-  <socket client="OBS" type="jack-audio" exclusive="off" name="OBS Mic">
+  <socket name="OBS Mic" client="OBS" exclusive="off" type="jack-audio">
    <plug>input_MONO</plug>
   </socket>
-  <socket client="ALSA\ plug\-in\ \[audacity\]" type="jack-audio" exclusive="off" name="Audacity">
+  <socket name="Audacity" client="ALSA\ plug\-in\ \[audacity\]" exclusive="off" type="jack-audio">
    <plug>input_MONO</plug>
   </socket>
-  <socket client="WEBRTC\ VoiceEngine" type="jack-audio" exclusive="off" name="Discord">
+  <socket name="Discord" client="WEBRTC\ VoiceEngine" exclusive="off" type="jack-audio">
    <plug>input_FL</plug>
    <plug>input_FR</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer Mic">
+  <socket name="jack_mixer Mic" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>Mic\ L</plug>
    <plug>Mic\ R</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer desktop">
+  <socket name="jack_mixer desktop" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>Desktop\ L</plug>
    <plug>Desktop\ R</plug>
   </socket>
-  <socket client="jack_mixer" type="jack-audio" exclusive="off" name="jack_mixer dc">
+  <socket name="jack_mixer dc" client="jack_mixer" exclusive="off" type="jack-audio">
    <plug>Discord\ L</plug>
    <plug>Discord\ R</plug>
   </socket>
-  <socket client="Desktop\ Sink" type="jack-audio" exclusive="off" name="Desktop Sink">
+  <socket name="SFX" client="jack_mixer" exclusive="off" type="jack-audio">
+   <plug>SFX\ L</plug>
+   <plug>SFX\ R</plug>
+  </socket>
+  <socket name="Desktop Sink" client="Desktop\ Sink" exclusive="off" type="jack-audio">
    <plug>playback_FL</plug>
    <plug>playback_FR</plug>
   </socket>
  </input-sockets>
  <slots/>
  <cables>
-  <cable output="jack_mixer MIDI" input="Midi-Bridge" type="jack-midi"/>
-  <cable output="Midi-Bridge" input="jack_mixer MIDI" type="jack-midi"/>
-  <cable output="jack_mixer G933" input="G933" type="jack-audio"/>
-  <cable output="jack_mixer Lautsprecher" input="Lautsprecher" type="jack-audio"/>
-  <cable output="jack_mixer AUX" input="AUX" type="jack-audio"/>
-  <cable output="jack_mixer OBS" input="OBS Desktop" type="jack-audio"/>
-  <cable output="G933 Mic" input="Microphone In" type="jack-audio"/>
-  <cable output="Microphone in Monitor" input="Microphone Out " type="jack-audio"/>
-  <cable output="Microphone Out Monitor" input="OBS Mic" type="jack-audio"/>
-  <cable output="Microphone Out Monitor" input="Audacity" type="jack-audio"/>
-  <cable output="Microphone Out Monitor" input="Discord" type="jack-audio"/>
-  <cable output="Microphone Out Monitor" input="jack_mixer Mic" type="jack-audio"/>
-  <cable output="Desktop Sink Monitor" input="jack_mixer desktop" type="jack-audio"/>
-  <cable output="Discord" input="jack_mixer dc" type="jack-audio"/>
-  <cable output="Discord sys" input="jack_mixer dc" type="jack-audio"/>
-  <cable output="Audacity" input="Desktop Sink" type="jack-audio"/>
+  <cable input="DJHP_Board1" output="jack_mixer MIDI" type="jack-midi"/>
+  <cable input="DJHP_Board2" output="jack_mixer MIDI" type="jack-midi"/>
+  <cable input="jack_mixer MIDI" output="DJHP_Board1" type="jack-midi"/>
+  <cable input="jack_mixer MIDI" output="DJHP_Board2" type="jack-midi"/>
+  <cable input="G933" output="jack_mixer G933" type="jack-audio"/>
+  <cable input="Lautsprecher" output="jack_mixer Lautsprecher" type="jack-audio"/>
+  <cable input="AUX" output="jack_mixer AUX" type="jack-audio"/>
+  <cable input="OBS Desktop" output="jack_mixer OBS" type="jack-audio"/>
+  <cable input="Microphone Out " output="jack_mixer SFX" type="jack-audio"/>
+  <cable input="Microphone Out " output="Microphone in Monitor" type="jack-audio"/>
+  <cable input="Microphone In" output="G933 Mic" type="jack-audio"/>
+  <cable input="OBS Mic" output="Microphone Out Monitor" type="jack-audio"/>
+  <cable input="jack_mixer Mic" output="Microphone Out Monitor" type="jack-audio"/>
+  <cable input="Audacity" output="Microphone Out Monitor" type="jack-audio"/>
+  <cable input="Discord" output="Microphone Out Monitor" type="jack-audio"/>
+  <cable input="jack_mixer desktop" output="Desktop Sink Monitor" type="jack-audio"/>
+  <cable input="jack_mixer dc" output="Discord" type="jack-audio"/>
+  <cable input="jack_mixer dc" output="Discord sys" type="jack-audio"/>
+  <cable input="SFX" output="Mixxx_sampler" type="jack-audio"/>
+  <cable input="Desktop Sink" output="Audacity" type="jack-audio"/>
+  <cable input="Desktop Sink" output="alsoft 1" type="jack-audio"/>
  </cables>
 </patchbay>
 
