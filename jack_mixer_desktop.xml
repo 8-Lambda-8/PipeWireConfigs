@@ -1,12 +1,13 @@
 <?xml version="1.0" ?>
-<jack_mixer geometry="1213x674" paned_position="757" visible="True">
-	<input_channel name="Desktop" type="stereo" direct_output="False" volume="-16.800000" balance="-0.025123" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="31" mute_midi_cc="27"/>
-	<input_channel name="Discord" type="stereo" direct_output="False" volume="-16.800000" balance="-0.004275" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="32" mute_midi_cc="28"/>
+<jack_mixer geometry="1213x674" paned_position="774" visible="True">
+	<input_channel name="Desktop" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="31" mute_midi_cc="27"/>
+	<input_channel name="Discord" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="32" mute_midi_cc="28"/>
 	<input_channel name="Chrome 1" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="33" mute_midi_cc="29"/>
 	<input_channel name="Chrome 2" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="34" mute_midi_cc="30"/>
-	<input_channel name="Chrome 3" type="stereo" direct_output="False" volume="-16.800000" balance="0.008257" wide="True" meter_prefader="False" out_mute="False"/>
-	<input_channel name="Mic" type="stereo" direct_output="False" volume="-inf" balance="0.000000" wide="True" meter_prefader="False" out_mute="False"/>
-	<output_channel name="Lautsprecher" type="stereo" muted_channels="Discord|Mic" color="rgb(169,197,162)" volume="-14.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="10" mute_midi_cc="6"/>
+	<input_channel name="Chrome 3" type="stereo" direct_output="False" volume="-16.800000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False"/>
+	<input_channel name="Mic" type="stereo" direct_output="False" volume="-16.435398" balance="0.000000" wide="True" meter_prefader="False" out_mute="False"/>
+	<input_channel name="SFX" type="stereo" direct_output="True" volume="-20.455372" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="14" balance_midi_cc="15" mute_midi_cc="16" solo_midi_cc="17"/>
+	<output_channel name="Lautsprecher" type="stereo" muted_channels="Discord|Mic" color="rgb(169,197,162)" volume="-18.188976" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="10" mute_midi_cc="6"/>
 	<output_channel name="Headset" type="stereo" color="rgb(93,143,75)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="11" mute_midi_cc="7"/>
 	<output_channel name="AUX" type="stereo" muted_channels="Mic" color="rgb(247,55,83)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="12" mute_midi_cc="8"/>
 	<output_channel name="OBS" type="stereo" muted_channels="Mic" color="rgb(172,204,27)" volume="0.000000" balance="0.000000" wide="True" meter_prefader="False" out_mute="False" volume_midi_cc="13" mute_midi_cc="9"/>
