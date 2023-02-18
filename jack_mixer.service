@@ -1,15 +1,12 @@
 [Unit]
 Description=jack_mixer
-After=pipewire.service
-Requires=pipewire.service
-PartOf=pipewire.service
+After=graphical.target
+BindsTo=pipewire.service
 
 [Service]
-PassEnvironment="PIPEWIRE_LINK_PASSIVE=true"
-Type=exec
+Type=simple
 Restart=always
-StandardOutput=journal
 ExecStart=/usr/bin/pw-jack /usr/bin/jack_mixer -c /home/jakob/PW_Configs/jack_mixer_desktop.xml
 
 [Install]
-WantedBy=default.target
+WantedBy=graphical.target
