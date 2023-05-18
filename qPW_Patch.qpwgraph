@@ -1,0 +1,114 @@
+<!DOCTYPE patchbay>
+<patchbay name="qPW_Patch" version="0.3.9">
+ <items>
+  <item port-type="pipewire-midi" node-type="pipewire">
+   <output port="jack_mixer:midi out" node="jack_mixer"/>
+   <input port="DJHP_Board2:DJHP_Board2 MIDI 1" node="Midi-Bridge"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone Out:capture_FR" node="Microphone Out"/>
+   <input port="jack_mixer:Mic R" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone in:capture_FL" node="Microphone in"/>
+   <input port="Microphone Out:playback_FL" node="Microphone Out"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:Headset R" node="jack_mixer"/>
+   <input port="G933 Headset:playback_FR" node="G933 Headset"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Desktop Sink:capture_FL" node="Desktop Sink"/>
+   <input port="jack_mixer:Desktop L" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Desktop Sink:capture_FR" node="Desktop Sink"/>
+   <input port="jack_mixer:Desktop R" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="WEBRTC VoiceEngine:output_FL" node="WEBRTC VoiceEngine"/>
+   <input port="jack_mixer:Discord L" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="G933 Headset:capture_MONO" node="G933 Headset"/>
+   <input port="Microphone in:playback_FL" node="Microphone in"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="G933 Headset:capture_MONO" node="G933 Headset"/>
+   <input port="Microphone in:playback_FR" node="Microphone in"/>
+  </item>
+  <item port-type="pipewire-midi" node-type="pipewire">
+   <output port="DJHP_Board:DJHP_Board MIDI 1" node="Midi-Bridge"/>
+   <input port="jack_mixer:midi in" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone Out:capture_FL" node="Microphone Out"/>
+   <input port="jack_mixer:Mic L" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:AUX L" node="jack_mixer"/>
+   <input port="AUX:playback_FL" node="AUX"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:AUX R" node="jack_mixer"/>
+   <input port="AUX:playback_FR" node="AUX"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:SFX Out R" node="jack_mixer"/>
+   <input port="Microphone Out:playback_FR" node="Microphone Out"/>
+  </item>
+  <item port-type="pipewire-midi" node-type="pipewire">
+   <output port="DJHP_Board2:DJHP_Board2 MIDI 1" node="Midi-Bridge"/>
+   <input port="jack_mixer:midi in" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:Lautsprecher L" node="jack_mixer"/>
+   <input port="Lautsprecher:playback_FL" node="Lautsprecher"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone in:capture_FR" node="Microphone in"/>
+   <input port="Microphone Out:playback_FR" node="Microphone Out"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:OBS R" node="jack_mixer"/>
+   <input port="OBS:input_FR" node="OBS"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="WEBRTC VoiceEngine:output_FR" node="WEBRTC VoiceEngine"/>
+   <input port="jack_mixer:Discord R" node="jack_mixer"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:Headset L" node="jack_mixer"/>
+   <input port="G933 Headset:playback_FL" node="G933 Headset"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:OBS L" node="jack_mixer"/>
+   <input port="OBS:input_FL" node="OBS"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone Out:capture_FL" node="Microphone Out"/>
+   <input port="WEBRTC VoiceEngine:input_FL" node="WEBRTC VoiceEngine"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:Lautsprecher R" node="jack_mixer"/>
+   <input port="Lautsprecher:playback_FR" node="Lautsprecher"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone Out:capture_FR" node="Microphone Out"/>
+   <input port="WEBRTC VoiceEngine:input_FR" node="WEBRTC VoiceEngine"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="Microphone Out:capture_FL" node="Microphone Out"/>
+   <input port="ALSA Capture:input_MONO" node="PipeWire ALSA [audacity]/ALSA Capture"/>
+  </item>
+  <item port-type="pipewire-audio" node-type="pipewire">
+   <output port="jack_mixer:SFX Out L" node="jack_mixer"/>
+   <input port="Microphone Out:playback_FL" node="Microphone Out"/>
+  </item>
+  <item port-type="pipewire-midi" node-type="pipewire">
+   <output port="jack_mixer:midi out" node="jack_mixer"/>
+   <input port="DJHP_Board:DJHP_Board MIDI 1" node="Midi-Bridge"/>
+  </item>
+ </items>
+</patchbay>
+
