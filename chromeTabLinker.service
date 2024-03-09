@@ -1,12 +1,13 @@
 [Unit]
 Description=chromeTabLinker
 After=jack_mixer.service
-#BindsTo=pipewire.service
+BindsTo=pipewire.service
 
 [Service]
 Type=simple
 Restart=always
+ExecStartPre=/bin/sleep 10
 ExecStart=pw-jack python3 /home/jakob/PW_Configs/chromeTabLinker.py
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
