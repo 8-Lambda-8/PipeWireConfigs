@@ -9,4 +9,4 @@ Restart=always
 ExecStart=/usr/bin/pw-jack /usr/bin/jack_mixer -c /home/jakob/PW_Configs/jack_mixer_desktop.xml
 
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
