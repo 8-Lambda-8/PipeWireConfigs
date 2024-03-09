@@ -1,12 +1,16 @@
 [Unit]
 Description=qPwGraph
 After=graphical.target
+Wants=graphical.target
 BindsTo=pipewire.service
 
 [Service]
 Type=simple
 Restart=always
-ExecStart=qpwgraph -a /home/jakob/PW_Configs/qPW_Patch.qpwgraph
+ExecStartPre=/bin/sleep 10
+Environment=QT_QPA_PLATFORM=xcb
+ExecStart=/usr/bin/qpwgraph -m
+# -a /home/jakob/PW_Configs/qPW_Patch.qpwgraph
 
 [Install]
 WantedBy=default.target
