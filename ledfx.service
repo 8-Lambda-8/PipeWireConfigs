@@ -1,0 +1,15 @@
+[Unit]
+Description=qPwGraph
+After=graphical.target
+Wants=graphical.target
+BindsTo=pipewire.service
+
+[Service]
+Type=simple
+Restart=always
+ExecStartPre=/bin/sleep 10
+#Environment=QT_QPA_PLATFORM=xcb
+ExecStart=/home/jakob/.local/bin/ledfx
+
+[Install]
+WantedBy=default.target
