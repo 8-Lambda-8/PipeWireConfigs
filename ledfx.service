@@ -7,9 +7,10 @@ BindsTo=pipewire.service
 [Service]
 Type=simple
 Restart=always
-ExecStartPre=/bin/sleep 10
+ExecStartPre=/bin/sleep 3
 #Environment=QT_QPA_PLATFORM=xcb
 ExecStart=/home/jakob/.local/bin/ledfx
+ExecStartPost=/bin/bash /home/jakob/PW_Configs/ledFX_baseOcean.sh
 
 [Install]
 WantedBy=default.target
