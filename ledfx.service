@@ -1,5 +1,5 @@
 [Unit]
-Description=qPwGraph
+Description=ledfx
 After=graphical.target
 Wants=graphical.target
 BindsTo=pipewire.service
@@ -7,10 +7,11 @@ BindsTo=pipewire.service
 [Service]
 Type=simple
 Restart=always
-ExecStartPre=/bin/sleep 3
+#ExecStartPre=/bin/sleep 3
 #Environment=QT_QPA_PLATFORM=xcb
-ExecStart=/home/jakob/.local/bin/ledfx
-ExecStartPost=/bin/bash /home/jakob/PW_Configs/ledFX_baseOcean.sh
+ExecStart=/home/jakob/.ledfx/LedFx-linux/LedFx
+#ExecStart=/bin/bash /home/jakob/.ledfx/startLedfx.sh
+ExecStartPost=/bin/bash /home/jakob/PW_Configs/ledFX_sceneSelect.sh
 
 [Install]
 WantedBy=default.target
